@@ -42,32 +42,32 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-1 gold-gradient" />
       <div className="absolute bottom-0 left-0 w-1/3 h-0.5 gold-gradient" />
 
-      <div className="relative z-10 container-custom px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+      <div className="relative z-10 container-custom px-4 sm:px-6 md:px-8 py-8 md:py-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12">
           {/* Left Side - Text Content */}
-          <div className="flex-1 max-w-2xl">
-            <div className="glass-dark rounded-3xl p-8 md:p-12">
-              <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-secondary-foreground mb-6 animate-fade-up">
+          <div className="flex-1 w-full max-w-2xl">
+            <div className="glass-dark rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-secondary-foreground mb-4 sm:mb-6 animate-fade-up">
                 <span className="gold-text">77 Multimarcas</span>
               </h1>
 
-              <h2 className="text-xl md:text-2xl lg:text-3xl text-secondary-foreground/90 mb-8 animate-fade-up delay-100 font-display">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-secondary-foreground/90 mb-6 sm:mb-8 animate-fade-up delay-100 font-display leading-relaxed">
                 Transformamos oportunidades em conquistas. Veículos de qualidade com transparência e preços que cabem no seu bolso.
               </h2>
 
-              <p className="text-lg md:text-xl text-muted-foreground mb-10 animate-fade-up delay-200">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 md:mb-10 animate-fade-up delay-200">
                 {`"77 Multimarcas – Muito mais que carros, entregamos oportunidades."`}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up delay-300">
                 <a
                   href="https://wa.me/5516993553317"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-gold-dark transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/30"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gold-dark transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/30"
                 >
                   Encontre seu veículo
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
 
                 <a
@@ -76,7 +76,7 @@ const Hero = () => {
                     e.preventDefault();
                     document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="inline-flex items-center justify-center gap-2 glass border-primary/40 text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/20 hover:border-primary transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 glass border-primary/40 text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-primary/20 hover:border-primary transition-all duration-300"
                 >
                   Conheça nossa história
                 </a>
@@ -86,11 +86,11 @@ const Hero = () => {
 
           {/* Right Side - Logo */}
           <div className="flex-shrink-0 animate-fade-up delay-200 hidden lg:block">
-            <div className="bg-white rounded-3xl p-8 animate-float shadow-2xl">
+            <div className="bg-white rounded-3xl p-6 xl:p-8 animate-float shadow-2xl">
               <img 
                 src={logo} 
                 alt="Logo 77 Multimarcas" 
-                className="w-64 xl:w-80 h-auto"
+                className="w-48 lg:w-56 xl:w-72 2xl:w-80 h-auto"
               />
             </div>
           </div>

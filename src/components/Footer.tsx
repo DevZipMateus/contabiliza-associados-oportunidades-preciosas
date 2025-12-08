@@ -5,25 +5,25 @@ const Footer = () => {
 
   return (
     <footer className="bg-secondary border-t border-border/20">
-      <div className="container-custom section-padding py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <img src={logo} alt="77 Multimarcas Logo" className="h-12 w-auto" />
+      <div className="container-custom section-padding py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
+            <img src={logo} alt="77 Multimarcas Logo" className="h-10 sm:h-12 w-auto" />
             <div>
-              <p className="font-display text-lg font-semibold text-secondary-foreground">
+              <p className="font-display text-base sm:text-lg font-semibold text-secondary-foreground">
                 77 Multimarcas
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 Muito mais que carros, entregamos oportunidades.
               </p>
             </div>
           </div>
 
-          <div className="text-center md:text-right">
-            <p className="text-muted-foreground text-sm">
+          <div className="text-center sm:text-right">
+            <p className="text-muted-foreground text-xs sm:text-sm">
               CNPJ: 59.074.877/0001-70
             </p>
-            <p className="text-muted-foreground text-sm mt-1">
+            <p className="text-muted-foreground text-xs sm:text-sm mt-1">
               © {currentYear} 77 Multimarcas. Todos os direitos reservados.
             </p>
           </div>
