@@ -108,7 +108,7 @@ const Services = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="w-14 h-14 rounded-xl glass-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-7 h-7 text-primary" />
+                <service.icon className="w-7 h-7 text-white" />
               </div>
               <h3 className="font-display text-xl font-semibold text-secondary-foreground mb-3">
                 {service.title}
