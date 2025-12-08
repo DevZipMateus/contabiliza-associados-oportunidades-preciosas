@@ -41,7 +41,9 @@ const Header = () => {
       <div className="container-custom">
         <nav className="flex items-center justify-between py-4 px-4 md:px-8">
           <a href="#inicio" onClick={() => scrollToSection("#inicio")} className="flex items-center">
-            <img src={logo} alt="77 Multimarcas Logo" className="h-24 md:h-16 w-auto" />
+            <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2">
+              <img src={logo} alt="77 Multimarcas Logo" className="h-20 md:h-14 w-auto" />
+            </div>
           </a>
 
           {/* Desktop Navigation */}
