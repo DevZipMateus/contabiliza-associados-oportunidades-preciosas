@@ -40,8 +40,8 @@ const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
       <div className="container-custom">
         <nav className="flex items-center justify-between py-4 px-4 md:px-8">
-          <a href="#inicio" onClick={() => scrollToSection("#inicio")} className="flex items-center h-12 md:h-14 overflow-hidden">
-            <img src={logo} alt="77 Multimarcas Logo" className="h-full w-auto scale-150 object-contain" />
+          <a href="#inicio" onClick={() => scrollToSection("#inicio")} className="flex items-center">
+            <img src={logo} alt="77 Multimarcas Logo" className="h-16 md:h-20 w-auto object-contain" />
           </a>
 
           {/* Desktop Navigation */}
