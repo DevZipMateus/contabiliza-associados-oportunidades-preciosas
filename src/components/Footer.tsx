@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container-custom section-padding py-8 sm:py-10 md:py-12 px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
-            <img src={logo} alt="77 Multimarcas Logo" className="h-14 sm:h-16 md:h-20 w-auto brightness-0 invert" />
+            <img src={logo} alt="77 Multimarcas Logo" className="h-20 sm:h-24 md:h-28 w-auto brightness-0 invert" />
             <div>
               <p className="font-display text-base sm:text-lg font-semibold text-secondary-foreground">
                 77 Multimarcas
