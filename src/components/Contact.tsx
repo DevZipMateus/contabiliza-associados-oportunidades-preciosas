@@ -106,7 +106,7 @@ const Contact = () => {
                 className="w-14 h-14 rounded-full glass-gold flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group"
                 aria-label="Instagram da 77 Multimarcas"
               >
-                <Instagram className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                <Instagram className="w-6 h-6 text-white group-hover:text-primary-foreground transition-colors duration-300" />
               </a>
             </div>
 
