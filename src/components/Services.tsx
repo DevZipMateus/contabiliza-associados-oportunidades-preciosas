@@ -1,4 +1,5 @@
 import { Car, ShieldCheck, BadgeDollarSign, Handshake, Clock, Award } from "lucide-react";
+import vehiclesImage from "@/assets/vehicles-lineup.jpg";
 
 const Services = () => {
   const services = [
@@ -51,6 +52,21 @@ const Services = () => {
             Oferecemos muito mais que carros. Entregamos oportunidades reais para você realizar seus sonhos.
           </p>
           <div className="w-24 h-1 gold-gradient mx-auto rounded-full mt-6" />
+        </div>
+
+        {/* Featured Image */}
+        <div className="relative rounded-2xl overflow-hidden mb-16 shadow-2xl">
+          <img
+            src={vehiclesImage}
+            alt="Variedade de veículos multimarcas disponíveis"
+            className="w-full h-[300px] md:h-[400px] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
+            <p className="font-display text-2xl md:text-3xl font-semibold text-secondary-foreground">
+              Diversas marcas e modelos para você escolher
+            </p>
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

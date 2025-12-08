@@ -1,4 +1,5 @@
 import { Target, Eye, Heart } from "lucide-react";
+import aboutImage from "@/assets/about-handover.jpg";
 
 const About = () => {
   const values = [
@@ -32,20 +33,30 @@ const About = () => {
           <div className="w-24 h-1 gold-gradient mx-auto rounded-full" />
         </div>
 
-        <div className="max-w-4xl mx-auto mb-20">
-          <div className="bg-muted/50 rounded-2xl p-8 md:p-12 border border-border">
+        {/* History Section with Image */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src={aboutImage}
+              alt="Entrega de chaves de veículo na 77 Multimarcas"
+              className="w-full h-[400px] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 to-transparent" />
+          </div>
+
+          <div className="bg-muted/50 rounded-2xl p-8 md:p-10 border border-border">
             <h3 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-6">
               Nossa história
             </h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                A 77 Multimarcas nasceu da visão empreendedora do Grupo Spazio Valore, um conglomerado que atua nos setores de contabilidade, advocacia, imobiliária e financiamentos. Acostumados a identificar oportunidades de negócio e entender as necessidades reais do mercado, os sócios perceberam uma realidade que se tornava cada vez mais evidente: os preços dos veículos estavam subindo de forma significativa, tornando difícil para muitas pessoas realizarem o sonho de adquirir um carro de qualidade com um valor acessível.
+                A 77 Multimarcas nasceu da visão empreendedora do Grupo Spazio Valore, um conglomerado que atua nos setores de contabilidade, advocacia, imobiliária e financiamentos.
               </p>
               <p>
-                Diante desse cenário, surgiu uma pergunta que impulsionou a criação da nova empresa: "E se pudéssemos oferecer veículos com preços realmente acessíveis, abaixo do mercado, sem abrir mão da qualidade e da transparência?"
+                Diante dos preços elevados no mercado automotivo, surgiu a pergunta: "E se pudéssemos oferecer veículos com preços realmente acessíveis, abaixo do mercado, sem abrir mão da qualidade e da transparência?"
               </p>
               <p>
-                Hoje, a 77 Multimarcas se consolida como uma marca que une credibilidade, experiência empresarial e visão de oportunidade, transformando o mercado local e ajudando nossos clientes a fazer negócios inteligentes, seguros e acessíveis.
+                Hoje, a 77 Multimarcas se consolida como uma marca que une credibilidade, experiência empresarial e visão de oportunidade, ajudando nossos clientes a fazer negócios inteligentes, seguros e acessíveis.
               </p>
             </div>
           </div>
