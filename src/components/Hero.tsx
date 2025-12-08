@@ -86,11 +86,11 @@ const Hero = () => {
 
           {/* Right Side - Logo */}
           <div className="flex-shrink-0 animate-fade-up delay-200 hidden lg:block">
-            <div className="glass rounded-3xl p-8 animate-float">
+            <div className="bg-white rounded-3xl p-8 animate-float shadow-2xl">
               <img 
                 src={logo} 
                 alt="Logo 77 Multimarcas" 
-                className="w-64 xl:w-80 h-auto drop-shadow-2xl"
+                className="w-64 xl:w-80 h-auto"
               />
             </div>
           </div>
