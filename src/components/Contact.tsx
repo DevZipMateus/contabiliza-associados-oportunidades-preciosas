@@ -1,6 +1,23 @@
 import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Contact = () => {
+  const parallaxOrbRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxOrbRef.current && sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const scrollProgress = -rect.top * 0.08;
+        parallaxOrbRef.current.style.transform = `translateY(${scrollProgress}px) rotate(${scrollProgress * 0.5}deg)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -29,7 +46,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="section-padding bg-background relative overflow-hidden">
+    <section ref={sectionRef} id="contato" className="section-padding bg-background relative overflow-hidden">
+      {/* Parallax Decorative Orb */}
+      <div 
+        ref={parallaxOrbRef}
+        className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-primary/5 via-primary/10 to-transparent blur-3xl"
+        style={{ willChange: 'transform' }}
+      />
+      
       {/* Floating Glass Elements */}
       <div className="absolute top-20 left-20 w-36 h-36 rounded-full glass-gold animate-float opacity-20 hidden lg:block" />
       <div className="absolute bottom-40 right-10 w-28 h-28 rounded-full glass animate-float-delayed opacity-25 hidden lg:block" />
