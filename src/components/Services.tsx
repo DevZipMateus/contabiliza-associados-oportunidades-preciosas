@@ -1,7 +1,24 @@
 import { Car, ShieldCheck, BadgeDollarSign, Handshake, Clock, Award } from "lucide-react";
+import { useEffect, useRef } from "react";
 import vehiclesImage from "@/assets/vehicles-lineup.jpg";
 
 const Services = () => {
+  const parallaxRef = useRef<HTMLImageElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxRef.current && sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const scrollProgress = -rect.top * 0.1;
+        parallaxRef.current.style.transform = `translateY(${scrollProgress}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const services = [
     {
       icon: Car,
@@ -42,8 +59,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="section-padding bg-secondary">
-      <div className="container-custom">
+    <section ref={sectionRef} id="servicos" className="section-padding bg-secondary relative overflow-hidden">
+      {/* Floating Glass Elements */}
+      <div className="absolute top-40 left-10 w-32 h-32 rounded-full glass animate-float opacity-20 hidden lg:block" />
+      <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full glass-gold animate-float-delayed opacity-15 hidden lg:block" />
+      <div className="absolute top-1/3 right-10 w-20 h-20 rounded-full glass animate-pulse-soft hidden lg:block" />
+
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-4">
             Por que escolher a <span className="gold-text">77 Multimarcas</span>?
@@ -54,42 +76,46 @@ const Services = () => {
           <div className="w-24 h-1 gold-gradient mx-auto rounded-full mt-6" />
         </div>
 
-        {/* Featured Image */}
-        <div className="relative rounded-2xl overflow-hidden mb-16 shadow-2xl">
+        {/* Featured Image with Parallax */}
+        <div className="parallax-container relative rounded-2xl overflow-hidden mb-16 shadow-2xl h-[350px] md:h-[450px]">
           <img
+            ref={parallaxRef}
             src={vehiclesImage}
             alt="Variedade de veículos multimarcas disponíveis"
-            className="w-full h-[300px] md:h-[400px] object-cover"
+            className="w-full h-[130%] object-cover absolute -top-[15%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
-            <p className="font-display text-2xl md:text-3xl font-semibold text-secondary-foreground">
-              Diversas marcas e modelos para você escolher
-            </p>
+          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent" />
+          
+          {/* Glass overlay with text */}
+          <div className="absolute bottom-0 left-0 right-0 p-8">
+            <div className="glass rounded-2xl p-6 md:p-8 max-w-2xl mx-auto text-center">
+              <p className="font-display text-2xl md:text-3xl font-semibold text-secondary-foreground">
+                Diversas marcas e modelos para você escolher
+              </p>
+              <p className="text-muted-foreground mt-2">
+                Encontre o veículo perfeito para suas necessidades
+              </p>
+            </div>
           </div>
         </div>
 
+        {/* Service Cards with Glassmorphism */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group relative bg-dark-lighter/50 backdrop-blur-sm border border-border/20 rounded-2xl p-8 hover:border-primary/40 transition-all duration-300 overflow-hidden"
+              className="group glass rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Hover Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-display text-xl font-semibold text-secondary-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
+              <div className="w-14 h-14 rounded-xl glass-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <service.icon className="w-7 h-7 text-primary" />
               </div>
+              <h3 className="font-display text-xl font-semibold text-secondary-foreground mb-3">
+                {service.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
