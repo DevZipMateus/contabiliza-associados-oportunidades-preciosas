@@ -29,8 +29,12 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="section-padding bg-background">
-      <div className="container-custom">
+    <section id="contato" className="section-padding bg-background relative overflow-hidden">
+      {/* Floating Glass Elements */}
+      <div className="absolute top-20 left-20 w-36 h-36 rounded-full glass-gold animate-float opacity-20 hidden lg:block" />
+      <div className="absolute bottom-40 right-10 w-28 h-28 rounded-full glass animate-float-delayed opacity-25 hidden lg:block" />
+
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Entre em <span className="gold-text">contato</span>
@@ -41,13 +45,15 @@ const Contact = () => {
           <div className="w-24 h-1 gold-gradient mx-auto rounded-full mt-6" />
         </div>
 
+        {/* Contact Cards with Glassmorphism */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {contactInfo.map((item) => (
+          {contactInfo.map((item, index) => (
             <div
               key={item.title}
-              className="bg-card border border-border rounded-2xl p-6 text-center hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
+              className="glass-light rounded-2xl p-6 text-center hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 group"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full glass-gold flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-display text-lg font-semibold text-foreground mb-2">
@@ -74,35 +80,45 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* Social Media & CTA */}
-        <div className="bg-secondary rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="font-display text-2xl md:text-3xl font-semibold text-secondary-foreground mb-4">
-            Siga-nos nas redes sociais
-          </h3>
-          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-            Acompanhe as melhores oportunidades e novidades do mercado automotivo.
-          </p>
+        {/* Social Media & CTA with Glass Effect */}
+        <div className="relative rounded-2xl overflow-hidden">
+          {/* Background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary via-dark to-secondary" />
+          
+          {/* Glass overlay */}
+          <div className="relative glass-dark rounded-2xl p-8 md:p-12 text-center">
+            {/* Decorative elements */}
+            <div className="absolute top-4 right-4 w-20 h-20 rounded-full glass animate-pulse-soft opacity-30" />
+            <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full glass-gold animate-float opacity-20" />
+            
+            <h3 className="font-display text-2xl md:text-3xl font-semibold text-secondary-foreground mb-4 relative z-10">
+              Siga-nos nas redes sociais
+            </h3>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto relative z-10">
+              Acompanhe as melhores oportunidades e novidades do mercado automotivo.
+            </p>
 
-          <div className="flex justify-center gap-4 mb-8">
+            <div className="flex justify-center gap-4 mb-8 relative z-10">
+              <a
+                href="https://instagram.com/_77multimarcas_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full glass-gold flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group"
+                aria-label="Instagram da 77 Multimarcas"
+              >
+                <Instagram className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              </a>
+            </div>
+
             <a
-              href="https://instagram.com/_77multimarcas_"
+              href="https://wa.me/5516993553317"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group"
-              aria-label="Instagram da 77 Multimarcas"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-gold-dark transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/30 relative z-10"
             >
-              <Instagram className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              Fale conosco pelo WhatsApp
             </a>
           </div>
-
-          <a
-            href="https://wa.me/5516993553317"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-gold-dark transition-all duration-300 hover:scale-105"
-          >
-            Fale conosco pelo WhatsApp
-          </a>
         </div>
       </div>
     </section>
