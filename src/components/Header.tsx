@@ -37,7 +37,7 @@ const Header = () => {
     }
     setIsMobileMenuOpen(false);
   };
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-secondary/95 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
       <div className="container-custom">
         <nav className="flex items-center justify-between py-4 px-4 md:px-8">
           <a href="#inicio" onClick={() => scrollToSection("#inicio")} className="flex items-center">
@@ -47,32 +47,32 @@ const Header = () => {
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-8">
             {navItems.map(item => <li key={item.href}>
-                <button onClick={() => scrollToSection(item.href)} className="text-secondary-foreground hover:text-primary transition-colors duration-300 font-medium">
+                <button onClick={() => scrollToSection(item.href)} className="text-foreground hover:text-muted-foreground transition-colors duration-300 font-medium">
                   {item.label}
                 </button>
               </li>)}
           </ul>
 
-          <a href="https://wa.me/5516993553317" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-semibold hover:bg-gold-dark transition-colors duration-300">
+          <a href="https://wa.me/5516993553317" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-semibold hover:bg-accent transition-colors duration-300">
             Fale conosco
           </a>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden text-secondary-foreground p-2" aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden text-foreground p-2" aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}>
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </nav>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && <div className="md:hidden bg-secondary/98 backdrop-blur-md border-t border-border/20">
+        {isMobileMenuOpen && <div className="md:hidden bg-white border-t border-border">
             <ul className="flex flex-col py-4">
               {navItems.map(item => <li key={item.href}>
-                  <button onClick={() => scrollToSection(item.href)} className="w-full text-left px-6 py-3 text-secondary-foreground hover:text-primary hover:bg-dark-lighter transition-colors duration-300">
+                  <button onClick={() => scrollToSection(item.href)} className="w-full text-left px-6 py-3 text-foreground hover:text-muted-foreground hover:bg-muted transition-colors duration-300">
                     {item.label}
                   </button>
                 </li>)}
               <li className="px-4 pt-4">
-                <a href="https://wa.me/5516993553317" target="_blank" rel="noopener noreferrer" className="block text-center bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-gold-dark transition-colors duration-300">
+                <a href="https://wa.me/5516993553317" target="_blank" rel="noopener noreferrer" className="block text-center bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent transition-colors duration-300">
                   Fale conosco
                 </a>
               </li>
