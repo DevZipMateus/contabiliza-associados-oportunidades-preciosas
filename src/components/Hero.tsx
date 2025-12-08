@@ -76,7 +76,7 @@ const Hero = () => {
                     e.preventDefault();
                     document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="inline-flex items-center justify-center gap-2 glass border-primary/40 text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-primary/20 hover:border-primary transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm border border-white/40 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-white/30 hover:border-white/60 transition-all duration-300"
                 >
                   Conheça nossa história
                 </a>
