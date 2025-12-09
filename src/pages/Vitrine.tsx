@@ -1,28 +1,31 @@
 import Header from "@/components/Header";
 
 const Vitrine = () => {
-  // Header height: ~96px (logo h-20 + py-4 padding)
-  const headerHeight = 96;
+  // Header: logo (80px desktop) + py-4 padding (32px) = ~112px
+  const headerHeight = 112;
   const badgeHeight = 63;
 
   return (
-    <div className="h-screen w-full overflow-hidden">
+    <div className="min-h-screen w-full overflow-hidden bg-white">
       {/* Header fixo */}
       <Header />
       
-      {/* Iframe com margem superior para não sobrepor o header */}
+      {/* Iframe com margin-top para não ficar atrás do header fixo */}
       <iframe 
         src="https://77multimarcas.egestor.com.br/vitrine/" 
-        className="w-full border-none"
+        className="w-full border-none block"
         style={{ 
           marginTop: `${headerHeight}px`,
-          height: `calc(100vh - ${headerHeight}px - ${badgeHeight}px)` 
+          height: `calc(100vh - ${headerHeight}px - ${badgeHeight}px)`
         }}
         title="Demonstração de Vitrine"
       />
       
       {/* Badge inferior - 63px */}
-      <div id="montesite-footer-badge" className="h-[63px] w-full" />
+      <div 
+        id="montesite-footer-badge" 
+        className="h-[63px] w-full"
+      />
     </div>
   );
 };
