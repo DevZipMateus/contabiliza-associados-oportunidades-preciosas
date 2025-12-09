@@ -5,7 +5,6 @@ const Vitrine = () => {
   const headerHeight = 112;
   const badgeHeight = 63;
 
-  // Garantir que o script do MonteSite seja executado
   useEffect(() => {
     // Verificar se o badge já existe
     const existingBadge = document.getElementById('montesite-footer-badge');
@@ -20,6 +19,10 @@ const Vitrine = () => {
       existingBadge.style.height = '63px';
     }
 
+    // Travar scroll da página
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
     // Cleanup: remover estilos ao sair da página
     return () => {
       if (existingBadge) {
@@ -30,11 +33,13 @@ const Vitrine = () => {
         existingBadge.style.zIndex = '';
         existingBadge.style.height = '';
       }
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     };
   }, []);
 
   return (
-    <div className="w-full bg-white" style={{ minHeight: '100vh', paddingBottom: `${badgeHeight}px` }}>
+    <div className="w-full h-screen overflow-hidden bg-white">
       {/* Header fixo */}
       <Header />
       
