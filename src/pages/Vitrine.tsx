@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 
 const Vitrine = () => {
   // Header: logo (80px desktop) + py-4 padding (32px) = ~112px
+  // Badge MonteSite: 63px (já está no index.html body)
   const headerHeight = 112;
   const badgeHeight = 63;
 
@@ -20,12 +21,7 @@ const Vitrine = () => {
         }}
         title="Demonstração de Vitrine"
       />
-      
-      {/* Badge inferior - 63px */}
-      <div 
-        id="montesite-footer-badge" 
-        className="h-[63px] w-full"
-      />
+      {/* Badge MonteSite já está no body do index.html - não duplicar aqui */}
     </div>
   );
 };
