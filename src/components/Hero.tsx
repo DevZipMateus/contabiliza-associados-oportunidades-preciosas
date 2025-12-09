@@ -1,5 +1,6 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Car } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-showroom.jpg";
 import logo from "@/assets/logo.png";
 const Hero = () => {
@@ -59,7 +60,7 @@ const Hero = () => {
                 {`"77 Multimarcas – Muito mais que carros, entregamos oportunidades."`}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up delay-300">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 animate-fade-up delay-300">
                 <a
                   href="https://wa.me/5516993553317"
                   target="_blank"
@@ -69,6 +70,14 @@ const Hero = () => {
                   Encontre seu veículo
                   <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
+
+                <Link
+                  to="/vitrine"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  <Car className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Ver Vitrine
+                </Link>
 
                 <a
                   href="#sobre"
