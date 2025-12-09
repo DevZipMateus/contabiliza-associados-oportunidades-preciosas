@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
   useEffect(() => {
@@ -17,6 +18,24 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle hash scrolling after navigation
+  useEffect(() => {
+    if (isHomePage && location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }, 100);
+      }
+    }
+  }, [location, isHomePage]);
+
   const navItems = [
     { label: "Início", href: "#inicio", isPage: false },
     { label: "Sobre", href: "#sobre", isPage: false },
@@ -26,10 +45,13 @@ const Header = () => {
   ];
 
   const scrollToSection = (href: string) => {
+    setIsMobileMenuOpen(false);
+    
     if (!isHomePage) {
-      window.location.href = "/" + href;
+      navigate("/" + href);
       return;
     }
+    
     const element = document.querySelector(href);
     if (element) {
       const headerOffset = 80;
@@ -40,7 +62,6 @@ const Header = () => {
         behavior: "smooth"
       });
     }
-    setIsMobileMenuOpen(false);
   };
 
   const handleNavClick = (item: { href: string; isPage: boolean }) => {
