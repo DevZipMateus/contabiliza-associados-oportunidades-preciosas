@@ -52,7 +52,7 @@ const Hero = () => {
                 <span className="gold-text font-bookman">77 Multimarcas</span>
               </h1>
 
-              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-secondary-foreground/90 mb-6 sm:mb-8 animate-fade-up delay-100 font-display leading-relaxed">
+              <h2 className="font-calibri text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-secondary-foreground/90 mb-6 sm:mb-8 animate-fade-up delay-100 leading-relaxed">
                 Transformamos oportunidades em conquistas. Veículos de qualidade com transparência e preços que cabem no seu bolso.
               </h2>
 

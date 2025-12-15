@@ -65,6 +65,7 @@ export default {
       fontFamily: {
         display: ['Playfair Display', 'serif'],
         bookman: ['Libre Baskerville', 'Bookman Old Style', 'serif'],
+        calibri: ['Calibri', 'Carlito', 'sans-serif'],
         sans: ['system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
