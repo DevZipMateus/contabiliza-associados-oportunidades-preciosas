@@ -68,7 +68,7 @@ const Services = () => {
       <div className="container-custom relative z-10 px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-4">
-            Por que escolher a <span className="gold-text">77 Multimarcas</span>?
+            Por que escolher a <span className="gold-text font-bookman">77 Multimarcas</span>?
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Oferecemos muito mais que carros. Entregamos oportunidades reais para você realizar seus sonhos.

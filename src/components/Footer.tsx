@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
             <img src={logo} alt="77 Multimarcas Logo" className="h-20 sm:h-24 md:h-28 w-auto brightness-0 invert" />
             <div>
-              <p className="font-display text-base sm:text-lg font-semibold text-secondary-foreground">
+              <p className="font-bookman text-base sm:text-lg font-semibold text-secondary-foreground">
                 77 Multimarcas
               </p>
               <p className="text-xs sm:text-sm text-muted-foreground">
@@ -24,7 +24,7 @@ const Footer = () => {
               CNPJ: 59.074.877/0001-70
             </p>
             <p className="text-muted-foreground text-xs sm:text-sm mt-1">
-              © {currentYear} 77 Multimarcas. Todos os direitos reservados.
+              © {currentYear} <span className="font-bookman">77 Multimarcas</span>. Todos os direitos reservados.
             </p>
           </div>
         </div>
