@@ -21,7 +21,7 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Endereço",
+      title: "Endereço administrativo",
       content: "R. Visconde de Inhaúma, 490 - Sala 1305, Conj. 3",
       subtitle: "Centro - Ribeirão Preto, SP - CEP 14010-100",
     },
