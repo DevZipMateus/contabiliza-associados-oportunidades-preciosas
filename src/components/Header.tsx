@@ -100,7 +100,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <a href="https://wa.me/5516993553317" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-semibold hover:bg-accent transition-colors duration-300">
+          <a href="https://wa.me/5516981393043" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-semibold hover:bg-accent transition-colors duration-300">
             Fale conosco
           </a>
 
@@ -135,7 +135,7 @@ const Header = () => {
                 </li>
               ))}
               <li className="px-4 pt-4">
-                <a href="https://wa.me/5516993553317" target="_blank" rel="noopener noreferrer" className="block text-center bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent transition-colors duration-300">
+                <a href="https://wa.me/5516981393043" target="_blank" rel="noopener noreferrer" className="block text-center bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent transition-colors duration-300">
                   Fale conosco
                 </a>
               </li>
