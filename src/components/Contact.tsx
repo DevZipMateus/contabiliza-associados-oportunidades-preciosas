@@ -28,8 +28,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone / WhatsApp",
-      content: "(16) 99355-3317",
-      link: "https://wa.me/5516993553317",
+      content: "(16) 98139-3043",
+      link: "https://wa.me/5516981393043",
     },
     {
       icon: Mail,
@@ -135,7 +135,7 @@ const Contact = () => {
             </div>
 
             <a
-              href="https://wa.me/5516993553317"
+              href="https://wa.me/5516981393043"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gold-dark transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/30 relative z-10"

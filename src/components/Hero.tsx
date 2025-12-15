@@ -62,7 +62,7 @@ const Hero = () => {
 
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 animate-fade-up delay-300">
                 <a
-                  href="https://wa.me/5516993553317"
+                  href="https://wa.me/5516981393043"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-gold-dark transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/30"
