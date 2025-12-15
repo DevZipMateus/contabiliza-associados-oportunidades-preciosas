@@ -1,34 +1,25 @@
 import { Instagram, Heart, MessageCircle, ExternalLink } from "lucide-react";
-
 const InstagramSection = () => {
   const instagramHandle = "@77multimarcas";
   const instagramUrl = "https://www.instagram.com/77multimarcas";
-
-  const posts = [
-    {
-      id: 1,
-      likes: "124",
-      comments: "18",
-    },
-    {
-      id: 2,
-      likes: "89",
-      comments: "12",
-    },
-    {
-      id: 3,
-      likes: "156",
-      comments: "24",
-    },
-    {
-      id: 4,
-      likes: "98",
-      comments: "15",
-    },
-  ];
-
-  return (
-    <section id="instagram" className="section-padding bg-background relative overflow-hidden">
+  const posts = [{
+    id: 1,
+    likes: "124",
+    comments: "18"
+  }, {
+    id: 2,
+    likes: "89",
+    comments: "12"
+  }, {
+    id: 3,
+    likes: "156",
+    comments: "24"
+  }, {
+    id: 4,
+    likes: "98",
+    comments: "15"
+  }];
+  return <section id="instagram" className="section-padding bg-background relative overflow-hidden">
       {/* Floating Glass Elements */}
       <div className="absolute top-20 left-10 w-32 h-32 rounded-full glass-gold animate-float opacity-20 hidden lg:block" />
       <div className="absolute bottom-20 right-20 w-24 h-24 rounded-full glass animate-float-delayed opacity-30 hidden lg:block" />
@@ -47,12 +38,7 @@ const InstagramSection = () => {
           <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-2">
             Acompanhe nossas novidades, ofertas exclusivas e os melhores veículos do mercado.
           </p>
-          <a
-            href={instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors"
-          >
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors">
             {instagramHandle}
             <ExternalLink className="w-4 h-4" />
           </a>
@@ -61,55 +47,17 @@ const InstagramSection = () => {
 
         {/* Posts Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10">
-          {posts.map((post, index) => (
-            <a
-              key={post.id}
-              href={instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden glass-light hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Placeholder gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/80 to-primary/20" />
-              
-              {/* Instagram icon placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Instagram className="w-12 h-12 sm:w-16 sm:h-16 text-white/20" />
-              </div>
-
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="flex items-center gap-4 sm:gap-6 text-white">
-                  <div className="flex items-center gap-1 sm:gap-2">
-                    <Heart className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
-                    <span className="text-sm sm:text-base font-semibold">{post.likes}</span>
-                  </div>
-                  <div className="flex items-center gap-1 sm:gap-2">
-                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
-                    <span className="text-sm sm:text-base font-semibold">{post.comments}</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          ))}
+          {posts.map((post, index) => {})}
         </div>
 
         {/* CTA Button */}
         <div className="text-center">
-          <a
-            href={instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
             <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
             Seguir no Instagram
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default InstagramSection;
