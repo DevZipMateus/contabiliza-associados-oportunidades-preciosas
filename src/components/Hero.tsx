@@ -49,7 +49,7 @@ const Hero = () => {
           <div className="flex-1 w-full max-w-2xl">
             <div className="glass-dark rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12">
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-secondary-foreground mb-4 sm:mb-6 animate-fade-up">
-                <span className="gold-text">77 Multimarcas</span>
+                <span className="gold-text font-bookman">77 Multimarcas</span>
               </h1>
 
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-secondary-foreground/90 mb-6 sm:mb-8 animate-fade-up delay-100 font-display leading-relaxed">
@@ -57,7 +57,7 @@ const Hero = () => {
               </h2>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 md:mb-10 animate-fade-up delay-200">
-                {`"77 Multimarcas – Muito mais que carros, entregamos oportunidades."`}
+                "<span className="font-bookman">77 Multimarcas</span> – Muito mais que carros, entregamos oportunidades."
               </p>
 
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 animate-fade-up delay-300">

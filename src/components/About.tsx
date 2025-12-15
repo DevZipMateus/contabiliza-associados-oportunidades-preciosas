@@ -49,7 +49,7 @@ const About = () => {
       <div className="container-custom relative z-10 px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Sobre a <span className="gold-text">77 Multimarcas</span>
+            Sobre a <span className="gold-text font-bookman">77 Multimarcas</span>
           </h2>
           <div className="w-20 sm:w-24 h-1 gold-gradient mx-auto rounded-full" />
         </div>
@@ -79,13 +79,13 @@ const About = () => {
             </h3>
             <div className="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
               <p>
-                A 77 Multimarcas nasceu da visão empreendedora do Grupo Spazio Valore, um conglomerado que atua nos setores de contabilidade, advocacia, imobiliária e financiamentos.
+                A <span className="font-bookman">77 Multimarcas</span> nasceu da visão empreendedora do Grupo Spazio Valore, um conglomerado que atua nos setores de contabilidade, advocacia, imobiliária e financiamentos.
               </p>
               <p>
                 Diante dos preços elevados no mercado automotivo, surgiu a pergunta: "E se pudéssemos oferecer veículos com preços realmente acessíveis, abaixo do mercado, sem abrir mão da qualidade e da transparência?"
               </p>
               <p>
-                Hoje, a 77 Multimarcas se consolida como uma marca que une credibilidade, experiência empresarial e visão de oportunidade.
+                Hoje, a <span className="font-bookman">77 Multimarcas</span> se consolida como uma marca que une credibilidade, experiência empresarial e visão de oportunidade.
               </p>
             </div>
           </div>
