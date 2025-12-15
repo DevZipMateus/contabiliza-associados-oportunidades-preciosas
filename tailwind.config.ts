@@ -64,6 +64,7 @@ export default {
       },
       fontFamily: {
         display: ['Playfair Display', 'serif'],
+        bookman: ['Libre Baskerville', 'Bookman Old Style', 'serif'],
         sans: ['system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
