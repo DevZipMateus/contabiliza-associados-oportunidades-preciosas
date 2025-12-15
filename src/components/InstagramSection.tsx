@@ -47,7 +47,29 @@ const InstagramSection = () => {
 
         {/* Posts Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10">
-          {posts.map((post, index) => {})}
+          {posts.map((post, index) => (
+            <a
+              key={post.id}
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative aspect-square bg-muted rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50">
+                <div className="flex items-center gap-4 text-white">
+                  <span className="flex items-center gap-1">
+                    <Heart className="w-4 h-4" />
+                    {post.likes}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <MessageCircle className="w-4 h-4" />
+                    {post.comments}
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
         </div>
 
         {/* CTA Button */}

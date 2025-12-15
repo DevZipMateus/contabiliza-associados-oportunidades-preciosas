@@ -1,4 +1,4 @@
-import { ChevronRight, Car } from "lucide-react";
+import { ChevronRight, Car, Instagram } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-showroom.jpg";
@@ -78,6 +78,16 @@ const Hero = () => {
                   <Car className="w-4 h-4 sm:w-5 sm:h-5" />
                   Ver Vitrine
                 </Link>
+
+                <a
+                  href="https://www.instagram.com/77multimarcas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Instagram
+                </a>
 
                 <a
                   href="#sobre"
