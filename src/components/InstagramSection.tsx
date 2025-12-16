@@ -1,7 +1,7 @@
 import { Instagram, Heart, MessageCircle, ExternalLink } from "lucide-react";
 const InstagramSection = () => {
-  const instagramHandle = "@77multimarcas";
-  const instagramUrl = "https://www.instagram.com/77multimarcas";
+  const instagramHandle = "@_77multimarcas_";
+  const instagramUrl = "https://www.instagram.com/_77multimarcas_";
   const posts = [{
     id: 1,
     likes: "124",
